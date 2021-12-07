@@ -4,9 +4,16 @@
   box-sizing: border-box;
 }
 
+button {
+  border: none;
+  background: none;
+}
+
 /* Styling the header */
 
 /* Styling the main */
+
+/********** HERO IMAGES ***********/
 #hero-img {
   display: grid;
   max-width: 85%;
@@ -26,4 +33,24 @@
   grid-area: 1 / 1 / 2 / 2;
   width: 20rem;
   border: 5px solid white;
+}
+
+/********** INTRO TEXT ***********/
+#main-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 85%;
+  margin: 2.5rem auto 0 auto;
+  gap: 1.5rem;
+}
+
+#main-intro h1 {
+  max-width: 25rem;
+  text-align: center;
+}
+
+#main-intro button {
+  padding: 0.8rem 2.5rem;
+  border: 1px solid black;
 }
