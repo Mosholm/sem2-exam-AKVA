@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styling the header */
+
+header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+header ul {
+  display: flex;
+}
+
+.header-buttons {
+  display: flex;
+}
+
+.svg-button {
+  width: 100px;
+  height: 100px;
+}
+
+.header-buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.header-buttons p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header button {
+    background-color: none;
+
+}
+
+/* Styling the main */
