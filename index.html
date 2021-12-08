@@ -11,17 +11,69 @@
 
   <body>
     <header>
-      <nav>
+      <nav class="header-list">
         <ul>
           <li><a href="#">Home</a></li>
-          <li><a href="#">Jewelry</a></li>
+          <li class="activate-dropdown">
+            <a href="#">Jewelry</a>
+            <section class="dropdown-menu">
+              <nav class="dropdown-column1">
+                <h3>Categories</h3>
+                <ul>
+                  <li><a href="#">Rings</a></li>
+                  <li><a href="#">Earrings</a></li>
+                  <li><a href="#">Bracelets</a></li>
+                  <li><a href="#">Necklaces</a></li>
+                  <li><a href="#">Wedding rings</a></li>
+                  <li><a href="#">Bespoke</a></li>
+                  <li><a href="#">Gift card</a></li>
+                </ul>
+              </nav>
+              <nav class="dropdown-column2">
+                <h3>Explore</h3>
+                <ul>
+                  <li><b>Materials</b></li>
+                  <li>
+                    <ul>
+                      <li><a href="#">Silver</a></li>
+                      <li><a href="#">Gold</a></li>
+                      <li><a href="#">Diamond</a></li>
+                    </ul>
+                  </li>
+                  <li><b>Collection</b></li>
+                  <li>
+                    <ul>
+                      <li><a href="#">Signature</a></li>
+                      <li><a href="#">Consilium</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+            </section>
+          </li>
           <li><a href="#">Consciousness</a></li>
-          <li><a href="#">About</a></li>
+          <li class="activate-dropdown">
+            <a href="#">About</a>
+            <section class="dropdown-menu">
+              <nav class="dropdown-column1">
+                <ul>
+                  <li><a href="#">Contact</a></li>
+                  <li><a href="#">Our story</a></li>
+                  <li><a href="#">Gift card</a></li>
+                  <li><a href="#">Blog</a></li>
+                </ul>
+              </nav>
+            </section>
+          </li>
         </ul>
       </nav>
       <div class="header-logo">
         <a href="#">
-          <img src="assets/logo/logo_small-1.png" alt="AKVA logo" />
+          <img
+            class="initial-logo-position"
+            src="assets/logo/logo_small-1.png"
+            alt="AKVA logo"
+          />
         </a>
       </div>
       <nav class="header-buttons-menu">
@@ -263,5 +315,6 @@
       </section>
     </main>
     <footer></footer>
+    <script src="js/script.js"></script>
   </body>
 </html>
