@@ -172,7 +172,7 @@ h2 {
   width: 100%;
 }
 
-h3 a::after {
+.link-line::after {
   content: "";
   display: block;
   width: 100%;
@@ -183,7 +183,7 @@ h3 a::after {
   transition: width 0.5s cubic-bezier(0.73, 0, 0.38, 1);
 }
 
-h3 a:hover::after {
+.link-line:hover::after {
   width: 0;
 }
 
@@ -284,4 +284,64 @@ h3 a:hover::after {
   padding: 0.8rem 2.5rem;
   border: 1px solid black;
   background-color: white;
+}
+
+/********** QUOTE ***********/
+.quote {
+  display: flex;
+  flex-direction: column;
+  max-width: 85%;
+  margin: auto;
+  margin-top: 4rem;
+  gap: 0.5rem;
+}
+
+.quote blockquote {
+  align-self: center;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.quote figcaption {
+  align-self: flex-end;
+}
+
+/********** VIDEO ***********/
+video {
+  display: block;
+  max-width: 55%;
+  margin: auto;
+  margin-top: 4rem;
+}
+
+/********** FOUNDERS ***********/
+#main-meet {
+  display: grid;
+  max-width: 85%;
+  margin: auto;
+  grid-template-columns: 1fr 1fr;
+  background: white;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+#main-meet div {
+  justify-self: center;
+  align-self: center;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+#main-meet p {
+  margin-top: 0.5rem;
+}
+
+#main-meet a {
+  margin-top: 1.5rem;
+}
+
+#main-meet img {
+  grid-area: 1 / 2 / 2 / 3;
+  width: 100%;
 }
