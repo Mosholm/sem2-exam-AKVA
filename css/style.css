@@ -1,12 +1,12 @@
 :root {
   --h1-font: normal 400
-      calc(20px + (32 - 20) * ((100vw - 300px) / (1600 - 300))) nunito-sans,
+      calc(20px + (32 - 20) * ((100vw - 200px) / (1600 - 200))) nunito-sans,
     sans-serif;
   --h2-font: normal 400
-      calc(17px + (25 - 17) * ((100vw - 300px) / (1600 - 300))) granville,
+      calc(17px + (25 - 17) * ((100vw - 200px) / (1600 - 200))) granville,
     serif;
   --h3-font: normal 400 0.8rem nunito-sans, sans-serif;
-  --p-font: normal 300 calc(14px + (18 - 14) * ((100vw - 300px) / (1600 - 300)))
+  --p-font: normal 300 calc(14px + (18 - 14) * ((100vw - 200px) / (1600 - 200)))
       nunito-sans,
     sans-serif;
   --button-hover: black;
@@ -220,13 +220,13 @@ main {
 #hero-img img:first-of-type {
   grid-area: 1 / 1 / 2 / 2;
   width: 100%;
-  height: 35rem;
+  height: calc(400px + (600 - 400) * ((100vw - 200px) / (1600 - 200)));
   object-fit: cover;
 }
 
 #hero-img img:nth-of-type(2) {
   grid-area: 1 / 1 / 2 / 2;
-  width: 20rem;
+  width: calc(220px + (450 - 220) * ((100vw - 200px) / (1600 - 200)));
   border: 5px solid white;
 }
 
@@ -248,8 +248,8 @@ main {
 .white-background {
   background-color: white;
   max-width: var(--general-width);
-  margin: 2.5rem auto 0 auto;
-  padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+  margin: 2.5rem auto;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
 }
 
 /********** GIFTS ***********/
@@ -357,7 +357,7 @@ h2 {
   display: flex;
   flex-direction: column;
   max-width: 60%;
-  margin: 2rem auto 5rem auto;
+  margin: 2rem auto;
   align-items: center;
   gap: 1rem;
   border: 1px solid #aeaeae;
@@ -380,9 +380,9 @@ h2 {
 /********** VIDEO ***********/
 video {
   display: block;
-  max-width: 55%;
-  margin: auto;
-  margin-top: 4rem;
+  width: calc(250px + (900 - 250) * ((100vw - 200px) / (1600 - 200)));
+  margin: 2rem auto;
+  border: 5px solid white;
 }
 
 /********** FOUNDERS ***********/
@@ -446,14 +446,31 @@ video {
   }
 }
 
+@media screen and (max-width: 580px) {
+  .gifts-products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #discover-coll {
+    flex-direction: column;
+  }
+}
+
 @media screen and (max-width: 650px) {
   :root {
     --general-width: 100%;
   }
-}
 
-@media screen and (max-width: 400px) {
-  .gifts-products {
-    grid-template-columns: repeat(2, 1fr);
+  #main-meet {
+    grid-template-rows: 0.7fr 0.5fr;
+  }
+
+  #main-meet div {
+    padding: 1.5rem 1rem;
+    grid-area: 2 / 1 / 3 / 3;
+  }
+
+  #main-meet img {
+    grid-area: 1 / 1 / 2 / 3;
   }
 }
