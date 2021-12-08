@@ -3,9 +3,9 @@
       calc(20px + (32 - 20) * ((100vw - 300px) / (1600 - 300))) nunito-sans,
     sans-serif;
   --h2-font: normal 400
-      calc(15px + (25 - 15) * ((100vw - 300px) / (1600 - 300))) granville,
+      calc(17px + (25 - 17) * ((100vw - 300px) / (1600 - 300))) granville,
     serif;
-  --h3-font: normal 400 1rem nunito-sans, sans-serif;
+  --h3-font: normal 400 0.8rem nunito-sans, sans-serif;
   --p-font: normal 300 calc(14px + (18 - 14) * ((100vw - 300px) / (1600 - 300)))
       nunito-sans,
     sans-serif;
