@@ -71,7 +71,20 @@ header li {
 }
 
 .header-logo img {
+  z-index: 40;
   height: 60px;
+}
+
+.initial-logo-position {
+  transform-origin: center bottom;
+  transform: translate(0px, 68px) scale(1.6);
+  transition: transform 0.4s;
+}
+
+.logo-current {
+  transform-origin: center bottom;
+  transform: translate(0px, 0px) scale(1);
+  transition: transform 0.4s;
 }
 
 .svg-button {
