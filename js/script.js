@@ -23,7 +23,7 @@ const callbackFunction = function (entry) {
 
 const observer = new IntersectionObserver(callbackFunction, {
     threshold: 1,
-    rootMargin: "-90px 0px 0px 0px"
+    rootMargin: "-90px 0px 80% 0px"
 });
 
 observer.observe(heroImg);
