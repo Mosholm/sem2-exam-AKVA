@@ -86,6 +86,7 @@ header {
 header nav {
   display: flex;
   align-items: flex-end;
+  justify-content: flex-end;
 }
 
 .header-list {
@@ -101,12 +102,13 @@ header a {
   display: flex;
 }
 
-header li {
+.header-list li {
   padding-right: 1.5vw;
 }
 
 .header-logo {
   display: flex;
+  grid-column: 3/4;
   justify-content: center;
   align-items: flex-end;
 }
@@ -118,13 +120,15 @@ header li {
 
 .initial-logo-position {
   transform-origin: center bottom;
-  transform: translate(0px, 68px) scale(1.6);
+  /* transform: translate(0px, 68px) scale(1.6);
+  transition: transform 0.4s; */
+  transform: translate(0px, 0px) scale(1);
   transition: transform 0.4s;
 }
 
 .logo-current {
   transform-origin: center bottom;
-  transform: translate(0px, 0px) scale(1);
+  transform: translate(0px, 68px) scale(1.6);
   transition: transform 0.4s;
 }
 
@@ -133,13 +137,13 @@ header li {
   height: auto;
 }
 
-.header-buttons-menu {
+.header-settings-menu {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
 }
 
-.header-buttons-menu p {
+.header-settings-menu li {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -151,6 +155,17 @@ header button {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 16px;
   color: rgb(44, 44, 44);
+}
+
+/* --- HEADER BURGER MENU --- */
+
+.burger-icon {
+  width: 30px;
+  height: auto;
+}
+
+.burger-menu {
+  display: none;
 }
 
 /* --- HEADER DROPDOWN MENU --- */
@@ -485,10 +500,32 @@ footer small {
 }
 
 /********** MEDIA QUERIES ***********/
+
+@media screen and (max-width: 1100px) {
+  header {
+    font-size: 14px;
+  }
+
+  header button {
+    font-size: 14px;
+  }
+}
+
 @media screen and (max-width: 940px) {
   #main-diff {
     max-width: 85%;
     padding: 1rem 0.5rem;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+
+  .header-list, .header-settings {
+    display: none;
+  }
+  header {
+    font-size: 14px;
   }
 }
 
