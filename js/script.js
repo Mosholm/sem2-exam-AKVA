@@ -36,7 +36,7 @@ items.forEach(item => {
 const heroImg = document.querySelector("#hero-img img");
 
 function callbackFunction(entry) {
-    console.log(entry[0].isIntersecting);
+    // console.log(entry[0].isIntersecting);
     if (windowWidth >= widthThreshold) {
         if (entry[0].isIntersecting == true) {
             document.querySelector(".header-logo img").classList.add("logo-current");
@@ -70,6 +70,27 @@ function backInPosition() {
         }
     }
 }
+
+// *** Dropdown Menu for click ***///
+
+document.querySelector(".burger-icon").addEventListener("click", openDropdownMenu);
+
+function openDropdownMenu () {
+    document.querySelector(".burger-dropdown").classList.toggle("menu-dropped");
+}
+
+let categoryOption = document.querySelector(".category-options");
+
+document.querySelector(".dropdown-category").addEventListener("click", categoryClicked);
+
+function categoryClicked () {
+    document.querySelector(".category-options").classList.toggle("category-clicked");
+    categoryOption.forEach()
+}
+
+// *** Stiling the burger dropdown menu ***
+
+
 
 const collections = document.querySelectorAll(".cover-coll");
 const link1 = document.querySelector("#col-link1");
