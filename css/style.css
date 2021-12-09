@@ -12,6 +12,7 @@
   --button-hover: black;
   --button-font: normal 400 0.9rem nunito-sans, sans-serif;
   --general-width: 85%;
+  --default-line-width: 100%;
 }
 
 * {
@@ -283,7 +284,7 @@ h2 {
 .link-line::after {
   content: "";
   display: block;
-  width: 100%;
+  width: var(--default-line-width);
   height: 1px;
   bottom: 0px;
   position: relative;
