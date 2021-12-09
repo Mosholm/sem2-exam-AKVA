@@ -192,15 +192,18 @@ header button {
 }
 
 /* Styling the main */
-main button {
+#main-intro a,
+#main-diff a {
   font: var(--button-font);
   padding: 0.8rem 2.5rem;
   border: 1px solid black;
   transition: 0.25s;
 }
 
-main button:hover,
-main button:focus {
+#main-intro a:hover,
+#main-intro a:focus,
+#main-diff a:hover,
+#main-diff a:focus {
   box-shadow: inset 10rem 0 0 0 var(--button-hover);
   color: #fff;
 }
@@ -447,16 +450,6 @@ video {
   }
 }
 
-@media screen and (max-width: 580px) {
-  .gifts-products {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  #discover-coll {
-    flex-direction: column;
-  }
-}
-
 @media screen and (max-width: 650px) {
   :root {
     --general-width: 100%;
@@ -473,5 +466,19 @@ video {
 
   #main-meet img {
     grid-area: 1 / 1 / 2 / 3;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .gifts-products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #discover-coll {
+    flex-direction: column;
+  }
+
+  #main-diff p {
+    margin: 0 0.5rem;
   }
 }
