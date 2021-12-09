@@ -7,15 +7,16 @@ let htmlElem = document.querySelector("html");
 let windowWidth = htmlElem.clientWidth;
 
 window.onresize = reportWindowSize;
+const widthThreshold = 1100;
 
 function reportWindowSize() {
     windowWidth = htmlElem.clientWidth;
     // console.log(windowWidth);
-    if (windowWidth < 1000) {
+    if (windowWidth < widthThreshold) {
         document.querySelector(".header-logo img").classList.remove("logo-current");
-    } else if (windowWidth >= 1000 && heroInPosition == true) {
+    } else if (windowWidth >= widthThreshold && heroInPosition == true) {
         document.querySelector(".header-logo img").classList.add("logo-current");
-    } else if (windowWidth >= 1000 && heroInPosition == false){
+    } else if (windowWidth >= widthThreshold && heroInPosition == false){
         document.querySelector(".header-logo img").classList.remove("logo-current");
     }
 }
@@ -26,7 +27,7 @@ const items = document.querySelectorAll(".activate-dropdown");
 let heroInPosition = true;
 
 items.forEach(item => {
-    if (windowWidth >= 1000) {
+    if (windowWidth >= widthThreshold) {
         item.addEventListener("mouseenter", expandLogo);
         item.addEventListener("mouseleave", backInPosition);
     }
@@ -36,7 +37,7 @@ const heroImg = document.querySelector("#hero-img img");
 
 function callbackFunction(entry) {
     console.log(entry[0].isIntersecting);
-    if (windowWidth >= 1000) {
+    if (windowWidth >= widthThreshold) {
         if (entry[0].isIntersecting == true) {
             document.querySelector(".header-logo img").classList.add("logo-current");
             heroInPosition = true;
@@ -56,14 +57,14 @@ observer.observe(heroImg);
 
 function expandLogo() {
     // console.log("mouseenter");
-    if (windowWidth >= 1000) {
+    if (windowWidth >= widthThreshold) {
         document.querySelector(".header-logo img").classList.remove("logo-current");
     }
 }
 
 function backInPosition() {
     // console.log("mouseleave");
-    if (windowWidth >= 1000) {
+    if (windowWidth >= widthThreshold) {
         if (heroInPosition == true) {
             document.querySelector(".header-logo img").classList.add("logo-current");
         }
