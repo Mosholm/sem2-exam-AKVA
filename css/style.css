@@ -9,6 +9,12 @@
   --p-font: normal 300 calc(14px + (18 - 14) * ((100vw - 200px) / (1600 - 200)))
       nunito-sans,
     sans-serif;
+  --footer-font: normal 300
+      calc(12px + (14 - 12) * ((100vw - 200px) / (1600 - 200))) nunito-sans,
+    sans-serif;
+  --small-font: normal 300
+      calc(10px + (11 - 10) * ((100vw - 200px) / (1600 - 200))) nunito-sans,
+    sans-serif;
   --button-hover: black;
   --button-font: normal 400 0.9rem nunito-sans, sans-serif;
   --general-width: 85%;
@@ -428,6 +434,56 @@ video {
   object-fit: cover;
 }
 
+/********** FOOTER ***********/
+footer {
+  background-color: #3b5f73;
+  padding: 6rem;
+}
+
+#info {
+  color: white;
+  margin-bottom: 5rem;
+}
+
+#info h4 {
+  font: var(--h2-font);
+}
+
+#info div {
+  display: flex;
+  width: 100%;
+  margin-top: 1.5rem;
+  gap: 10rem;
+}
+
+#info ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  font: var(--footer-font);
+}
+
+#info ul li a {
+  font: var(--footer-font);
+}
+
+#info ul li {
+  width: fit-content;
+}
+
+#info ul:first-of-type {
+  gap: 1.1rem;
+}
+
+#info ul:nth-of-type(2) {
+  gap: 1rem;
+}
+
+footer small {
+  color: white;
+  font: var(--small-font);
+}
+
 /********** MEDIA QUERIES ***********/
 @media screen and (max-width: 940px) {
   #main-diff {
@@ -466,6 +522,22 @@ video {
 
   #main-meet img {
     grid-area: 1 / 1 / 2 / 3;
+  }
+
+  #info div {
+    flex-direction: column;
+    gap: 4rem;
+    max-width: 100%;
+    margin: auto;
+  }
+
+  #info ul:first-of-type {
+    gap: 0.8rem;
+    margin-top: 1.8rem;
+  }
+
+  footer {
+    padding: 4rem 2rem;
   }
 }
 
