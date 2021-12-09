@@ -77,15 +77,12 @@ document.querySelector(".burger-icon").addEventListener("click", openDropdownMen
 
 function openDropdownMenu () {
     document.querySelector(".burger-dropdown").classList.toggle("menu-dropped");
+
+    document.querySelector(".dropdown-category").addEventListener("click", categoryClicked);
 }
 
-let categoryOption = document.querySelector(".category-options");
-
-document.querySelector(".dropdown-category").addEventListener("click", categoryClicked);
-
 function categoryClicked () {
-    document.querySelector(".category-options").classList.toggle("category-clicked");
-    categoryOption.forEach()
+    document.querySelector(".burger-dropdown").classList.toggle(".category-clicked");
 }
 
 // *** Stiling the burger dropdown menu ***
