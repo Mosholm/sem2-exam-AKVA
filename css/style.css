@@ -176,7 +176,7 @@ header button {
 
 .burger-dropdown {
   display: grid;
-  grid-template-columns: 7.5% 1fr 1fr 7.5%;
+  grid-template-columns: 7.5% 1fr 7.5%;
   background-color: #f9f9f9;
   position: absolute;
   top: 85px;
@@ -195,7 +195,12 @@ header button {
   padding: 20px 0px 20px 0px;
 }
 
-.category-options{
+.category-options1{
+  height: 0;
+  overflow: hidden;
+}
+
+.category-options2{
   height: 0;
   overflow: hidden;
 }
