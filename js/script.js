@@ -14,6 +14,7 @@ function reportWindowSize() {
     // console.log(windowWidth);
     if (windowWidth < widthThreshold) {
         document.querySelector(".header-logo img").classList.remove("logo-current");
+        document.querySelector(".burger-dropdown").classList.remove("menu-dropped");
     } else if (windowWidth >= widthThreshold && heroInPosition == true) {
         document.querySelector(".header-logo img").classList.add("logo-current");
     } else if (windowWidth >= widthThreshold && heroInPosition == false) {
@@ -32,6 +33,22 @@ items.forEach((item) => {
         item.addEventListener("mouseleave", backInPosition);
     }
 });
+
+function expandLogo() {
+    // console.log("mouseenter");
+    if (windowWidth >= widthThreshold) {
+        document.querySelector(".header-logo img").classList.remove("logo-current");
+    }
+}
+
+function backInPosition() {
+    // console.log("mouseleave");
+    if (windowWidth >= widthThreshold) {
+        if (heroInPosition == true) {
+            document.querySelector(".header-logo img").classList.add("logo-current");
+        }
+    }
+}
 
 const heroImg = document.querySelector("#element-observer");
 
@@ -55,21 +72,6 @@ const observer = new IntersectionObserver(callbackFunction, {
 
 observer.observe(heroImg);
 
-function expandLogo() {
-    // console.log("mouseenter");
-    if (windowWidth >= widthThreshold) {
-        document.querySelector(".header-logo img").classList.remove("logo-current");
-    }
-}
-
-function backInPosition() {
-    // console.log("mouseleave");
-    if (windowWidth >= widthThreshold) {
-        if (heroInPosition == true) {
-            document.querySelector(".header-logo img").classList.add("logo-current");
-        }
-    }
-}
 
 // *** Dropdown Menu for click ***///
 
@@ -77,7 +79,8 @@ document.querySelector(".burger-icon").addEventListener("click", openDropdownMen
 
 function openDropdownMenu() {
     document.querySelector(".burger-dropdown").classList.toggle("menu-dropped");
-
+    document.querySelector(".category-options2").classList.remove("category-clicked");
+    document.querySelector(".category-options1").classList.remove("category-clicked");
 }
 
 document.querySelector(".dropdown-category1").addEventListener("click", category1Clicked);
@@ -93,7 +96,14 @@ function category2Clicked() {
     document.querySelector(".category-options2").classList.toggle("category-clicked");
 }
 
-// *** Stiling the burger dropdown menu ***
+// Clicking outside the menu
+
+document.addEventListener("click", elementClicked);
+
+function elementClicked(document) {
+    console.log(document.target);
+}
+
 
 
 
