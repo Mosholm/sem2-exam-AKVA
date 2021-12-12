@@ -80,6 +80,7 @@ header {
   color: rgb(44, 44, 44);
   position: fixed;
   z-index: 20;
+  box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.055);
 }
 
 header a {
@@ -173,9 +174,20 @@ header button {
 
 /* --- HEADER BURGER MENU --- */
 
-.burger-icon {
+.burger-icon, .bag-icon {
   width: 25px;
   height: auto;
+}
+
+.bag-icon {
+  width: 25px;
+  height: auto;
+}
+
+.left-side-menu {
+  display: flex;
+  align-items: flex-end;
+  display: none;
 }
 
 .burger-menu {
@@ -208,8 +220,6 @@ header button {
   align-items: center;
   width: 100%;
 }
-
-
 
 .dropdown-category2 {
   display: flex;
@@ -248,7 +258,7 @@ header button {
 }
 
 .menu-dropped {
-  height: 400px;
+  height: 455px;
 }
 
 .burger-dropdown ul{
@@ -732,6 +742,11 @@ footer small {
   .gifts-products {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .left-side-menu {
+    display: flex;
+    grid-column: 2/3;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -769,6 +784,11 @@ footer small {
       grid-column: 2/3;
       justify-content: center;
       align-items: flex-end;
+    }
+
+    .left-side-menu {
+      grid-column: 1/2;
+      padding-left: 20px;
     }
 
   #main-meet {
@@ -821,6 +841,11 @@ footer small {
   }
 
   .burger-icon {
+    width: 23px;
+    transition: width 0.4s;
+  }
+
+  .bag-icon {
     width: 23px;
     transition: width 0.4s;
   }
