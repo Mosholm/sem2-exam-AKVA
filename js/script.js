@@ -87,25 +87,18 @@ document.querySelector(".dropdown-category1").addEventListener("click", category
 document.querySelector(".dropdown-category2").addEventListener("click", category2Clicked);
 
 function category1Clicked() {
+    document.querySelector(".expand-options2").classList.remove("arrow-rotated");
     document.querySelector(".category-options2").classList.remove("category-clicked");
     document.querySelector(".category-options1").classList.toggle("category-clicked");
+    document.querySelector(".expand-options1").classList.toggle("arrow-rotated");
 }
 
 function category2Clicked() {
+    document.querySelector(".expand-options1").classList.remove("arrow-rotated");
     document.querySelector(".category-options1").classList.remove("category-clicked");
     document.querySelector(".category-options2").classList.toggle("category-clicked");
+    document.querySelector(".expand-options2").classList.toggle("arrow-rotated");
 }
-
-// Clicking outside the menu
-
-document.addEventListener("click", elementClicked);
-
-function elementClicked(document) {
-    console.log(document.target);
-}
-
-
-
 
 const collections = document.querySelectorAll(".cover-coll");
 const link1 = document.querySelector("#col-link1");
