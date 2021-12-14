@@ -171,14 +171,8 @@
         <img src="../assets/home/three-rings.png" alt="" />
         <img src="../assets/home/three-rings.png" alt="" />
         <img src="../assets/ora-ring.jpg" alt="" />
-        <div>
+        <div id="product-page-det">
           <h1>Latuca Ring</h1>
-          <p>
-            Lactuca Ring is made in 925 recycled sterling silver. This design is
-            also available in 14K recycled solid gold upon request. Please feel
-            free to contact us for guidance.
-          </p>
-
           <p>
             Lactuca is the Latin word for seaweed. Seaweed is the inspiration
             source behind this design. Our Lactuca Ring has shiny organic curves
@@ -186,19 +180,29 @@
             precious ocean. This ring is a real eye catcher with its voluminous
             and sophisticated design.
           </p>
-          <div class="product-price">265$</div>
-          <label for="pet-select">Choose a pet:</label>
 
-          <select name="pets" id="pet-select">
-            <option value="">--Please choose an option--</option>
-            <option value="dog">Dog</option>
-            <option value="cat">Cat</option>
-            <option value="hamster">Hamster</option>
-            <option value="parrot">Parrot</option>
-            <option value="spider">Spider</option>
-            <option value="goldfish">Goldfish</option>
-          </select>
-          <button>Add to cart</button>
+          <p>
+            The Ora Ring Pavé is made in 14K recycled solid gold set with a
+            total of 0,05ct brilliant cut Top Wesselton VS diamonds. Please feel
+            free to contact us for guidance or special requests. You are always
+            welcome to see and try our jewellery at our showroom in Copenhagen.
+            Make an appointment via e-mail info@akvajewellery.com
+          </p>
+          <div id="product-price">265</div>
+
+          <div>
+            <select name="sizes" id="size-select" autocomplete="off">
+              <option value="choose" id="cool">Choose a size</option>
+              <option value="size1">48</option>
+              <option value="size2">49</option>
+              <option value="size3">50</option>
+              <option value="size4">51</option>
+            </select>
+
+            <button class="link-line clear-invisible">Clear</button>
+          </div>
+
+          <button id="add" class="inactive">Add to cart</button>
           <button>Make an appointment</button>
         </div>
       </section>
@@ -232,5 +236,6 @@
       >
     </footer>
     <script src="../js/script.js"></script>
+    <script src="../js/product.js"></script>
   </body>
 </html>
