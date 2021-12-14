@@ -10,22 +10,38 @@
   </head>
   <body>
     <header>
+      <button class="left-side-menu">
+        <svg
+          class="bag-icon"
+          id="Layer_1"
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          width="408.33"
+          height="529.09"
+          viewBox="0 0 408.33 529.09"
+        >
+          <path
+            d="M204.17,0c-57.75,0-105,47.83-105,106.17v43.75H17.5A17.18,17.18,0,0,0,0,167.42V441.59a87.38,87.38,0,0,0,87.5,87.5H320.83a87.38,87.38,0,0,0,87.5-87.5V167.42a17.18,17.18,0,0,0-17.5-17.5H309.17V106.17C309.17,47.83,261.92,0,204.17,0Zm-70,106.16c0-39.08,31.5-71.17,70-71.17s70,32.08,70,71.17v43.75h-140ZM373.34,185.5V442.17a52.28,52.28,0,0,1-52.5,52.5H87.5A52.28,52.28,0,0,1,35,442.16V185.49H99.17v30.33a17.5,17.5,0,1,0,35,0V185.49h140v30.33a17.5,17.5,0,0,0,35,0V185.49Z"
+          />
+        </svg>
+      </button>
+
       <nav class="header-list">
         <ul>
-          <li><a href="#">Home</a></li>
-          <li class="activate-dropdown">
+          <li class="active-page"><a href="#">Home</a></li>
+          <li class="activate-dropdown underline-text">
             <a href="#">Jewelry</a>
             <section class="dropdown-menu">
               <nav class="dropdown-column1">
                 <h3>Categories</h3>
                 <ul>
-                  <li><a href="#">Rings</a></li>
-                  <li><a href="#">Earrings</a></li>
-                  <li><a href="#">Bracelets</a></li>
-                  <li><a href="#">Necklaces</a></li>
-                  <li><a href="#">Wedding rings</a></li>
-                  <li><a href="#">Bespoke</a></li>
-                  <li><a href="#">Gift card</a></li>
+                  <li class="underline-text"><a href="#">Rings</a></li>
+                  <li class="underline-text"><a href="#">Earrings</a></li>
+                  <li class="underline-text"><a href="#">Bracelets</a></li>
+                  <li class="underline-text"><a href="#">Necklaces</a></li>
+                  <li class="underline-text"><a href="#">Wedding rings</a></li>
+                  <li class="underline-text"><a href="#">Bespoke</a></li>
+                  <li class="underline-text"><a href="#">Gift card</a></li>
                 </ul>
               </nav>
               <nav class="dropdown-column2">
@@ -34,32 +50,32 @@
                   <li><b>Materials</b></li>
                   <li>
                     <ul>
-                      <li><a href="#">Silver</a></li>
-                      <li><a href="#">Gold</a></li>
-                      <li><a href="#">Diamond</a></li>
+                      <li class="underline-text"><a href="#">Silver</a></li>
+                      <li class="underline-text"><a href="#">Gold</a></li>
+                      <li class="underline-text"><a href="#">Diamond</a></li>
                     </ul>
                   </li>
                   <li><b>Collection</b></li>
                   <li>
                     <ul>
-                      <li><a href="#">Signature</a></li>
-                      <li><a href="#">Consilium</a></li>
+                      <li class="underline-text"><a href="#">Signature</a></li>
+                      <li class="underline-text"><a href="#">Consilium</a></li>
                     </ul>
                   </li>
                 </ul>
               </nav>
             </section>
           </li>
-          <li><a href="#">Consciousness</a></li>
-          <li class="activate-dropdown">
+          <li class="underline-text"><a href="#">Consciousness</a></li>
+          <li class="activate-dropdown underline-text">
             <a href="#">About</a>
             <section class="dropdown-menu">
               <nav class="dropdown-column1">
                 <ul>
-                  <li><a href="#">Contact</a></li>
-                  <li><a href="#">Our story</a></li>
-                  <li><a href="#">Gift card</a></li>
-                  <li><a href="#">Blog</a></li>
+                  <li class="underline-text"><a href="#">Our story</a></li>
+                  <li class="underline-text"><a href="#">Contact</a></li>
+                  <li class="underline-text"><a href="#">Gift card</a></li>
+                  <li class="underline-text"><a href="#">Blog</a></li>
                 </ul>
               </nav>
             </section>
@@ -99,7 +115,7 @@
                 />
               </svg>
             </button>
-            <span><button>DK</button>/<button>EN</button></span>
+            <span><button>DK</button> / <button>EN</button></span>
           </li>
           <li>
             <button>
@@ -161,13 +177,113 @@
               </g>
             </g>
           </svg>
+          <div class="burger-dropdown">
+            <ul class="burger-dropdown-options">
+              <li>
+                <b><a href="#">Home</a></b>
+              </li>
+              <li>
+                <b><a href="#">Jewelry</a></b>
+                <section>
+                  <nav>
+                    <h3 class="dropdown-category1">
+                      <b>Categories</b
+                      ><svg
+                        class="expand-options1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="grey"
+                        class="bi bi-caret-down-fill"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"
+                        />
+                      </svg>
+                    </h3>
+                    <ul class="category-options1">
+                      <li><a href="#">Rings</a></li>
+                      <li><a href="#">Earrings</a></li>
+                      <li><a href="#">Bracelets</a></li>
+                      <li><a href="#">Necklaces</a></li>
+                      <li><a href="#">Wedding rings</a></li>
+                      <li><a href="#">Bespoke</a></li>
+                      <li><a href="#">Gift card</a></li>
+                    </ul>
+                  </nav>
+                  <nav class="nav-left">
+                    <h3 class="dropdown-category2">
+                      <b>Explore</b
+                      ><svg
+                        class="expand-options2"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="grey"
+                        class="bi bi-caret-down-fill"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"
+                        />
+                      </svg>
+                    </h3>
+                    <ul class="category-options2">
+                      <li><b>Materials</b></li>
+                      <li>
+                        <ul>
+                          <li><a href="#">Silver</a></li>
+                          <li><a href="#">Gold</a></li>
+                          <li><a href="#">Diamond</a></li>
+                        </ul>
+                      </li>
+                      <li><b>Collection</b></li>
+                      <li>
+                        <ul>
+                          <li><a href="#">Signature</a></li>
+                          <li><a href="#">Consilium</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </nav>
+                </section>
+              </li>
+              <li>
+                <b><a href="#">Consciousness</a></b>
+              </li>
+              <li>
+                <b><a href="#">About</a></b>
+                <section>
+                  <nav class="dropdown-category">
+                    <ul>
+                      <li><a href="#">Contact</a></li>
+                      <li><a href="#">Our story</a></li>
+                      <li><a href="#">Gift card</a></li>
+                      <li><a href="#">Blog</a></li>
+                    </ul>
+                  </nav>
+                </section>
+              </li>
+              <li>
+                <b><a href="#">Language</a></b>
+              </li>
+              <li>
+                <b><a href="#">Appointment</a></b>
+              </li>
+            </ul>
+          </div>
         </nav>
       </nav>
     </header>
 
     <main>
       <section id="hero-img">
-        <img src="../assets/home/main-hero-img.jpg" alt="" />
+        <img
+          id="element-observer"
+          src="../assets/home/main-hero-img.jpg"
+          alt=""
+        />
       </section>
 
       <section id="list-info">
@@ -227,7 +343,6 @@
       >
     </footer>
 
-    <script src="../js/script.js"></script>
     <script src="../js/product-list.js"></script>
   </body>
 </html>
