@@ -1,13 +1,3 @@
-// *** DROPDOWN MENU EVENTS ***
-
-// *** Report Window Size ***//
-
-// for all pages
-//drop downs
-
-// for home and product list
-// logo change intersection observer
-
 function dropdownAnim() {
   // *** Dropdown Menu for click ***///
 
