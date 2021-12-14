@@ -294,6 +294,8 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  font: var(--h3-font);
+  font-size: 0.9rem;
 }
 
 .gifts-products h3 {
@@ -595,14 +597,36 @@ footer small {
   font-size: 0.8rem;
 }
 
-#product-page-det button:first-of-type {
+#product-page-det div {
+  display: flex;
+  gap: 0.8rem;
+  flex-direction: column;
+}
+
+#product-page-det div button {
+  align-self: flex-end;
+}
+
+.clear-invisible {
+  visibility: hidden;
+}
+
+#product-page-det > button:first-of-type {
   margin: 1.5rem 0;
   padding: 0.8rem 0;
   color: #3b5f73;
   border: 2px solid #3b5f73;
 }
 
-#product-page-det button:nth-of-type(2) {
+.inactive {
+  opacity: 0.5;
+}
+
+.inactive:hover {
+  cursor: not-allowed;
+}
+
+#product-page-det > button:nth-of-type(2) {
   padding: 0.8rem 0;
   background-color: #3b5f73;
   color: #f8f8f8;
@@ -613,6 +637,15 @@ footer small {
   font: var(--p-font);
   font-size: 1.4rem;
   margin: 2rem 0;
+}
+
+#product-page select {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font: var(--button-font);
+  border-bottom: 1px solid #c1c1c1;
+  padding-bottom: 0.5rem;
 }
 
 /********** MEDIA QUERIES ***********/
