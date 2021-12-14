@@ -87,10 +87,32 @@ header a {
   padding: 0px 2px 0px 2px
 }
 
-.header-list a:hover {
-  color: grey;
+.underline-text::after {
+  /* color: grey;
     background-color: var(--button-hover);
-    color: #fff;
+    color: #fff; */
+    content: "";
+    display: block;
+    width: 0;
+    height: 1px;
+    bottom: 0px;
+    position: relative;
+    background-color: currentColor;
+    transition: width 0.5s cubic-bezier(0.73, 0, 0.38, 1);
+}
+
+.underline-text:hover::after {
+  width: 100%;
+}
+
+.active-page::after {
+  content: "";
+  display: block;
+  width: var(--default-line-width);
+  height: 1px;
+  bottom: 0px;
+  position: relative;
+  background-color: currentColor;
 }
 
 header nav {
@@ -309,7 +331,7 @@ header h3 {
 }
 
 .activate-dropdown:hover .dropdown-menu {
-  height: 300px;
+  height: 320px;
 }
 
 .dropdown-menu nav,
