@@ -53,8 +53,6 @@ function dropdownAnim() {
   }
 }
 
-dropdownAnim();
-
 function databaseGet() {
   const urlParams = new URLSearchParams(window.location.search);
   const title = urlParams.get("title");
@@ -66,58 +64,63 @@ function databaseGet() {
     },
   };
 
-  console.log(url);
-
   fetch(url, options)
     .then((response) => response.json())
     .then(dynamicShow);
 }
 
 function dynamicShow(p) {
-  const temp = document.querySelector("template").content;
-  const clone = temp.cloneNode(true);
-  console.log(p);
+  const main = document.querySelector("main");
 
-  clone.querySelector("h1").textContent = p[0].title;
-  clone.querySelector("p:first-of-type").textContent = p[0].description1;
-  clone.querySelector("p:nth-of-type(2)").textContent = p[0].description2;
-  clone.querySelector("#product-price").textContent = `${p[0].price} €`;
-  clone.querySelector("img:first-of-type").src = p[0].coverImg;
+  main.querySelector("h1").textContent = p[0].title;
+  main.querySelector("p:first-of-type").textContent = p[0].description1;
+  // main.querySelector("p:nth-of-type(2)").textContent = p[0].description2;
+  main.querySelector("#product-price").textContent = `${p[0].price} €`;
+  main.querySelector("img:first-of-type").src = p[0].coverImg;
 
   let sizes = p[0].sizes.split(",");
-  console.log(sizes);
 
-  for (let z = 0; z < sizes.length; z++) {
-    const sizeOption = document.createElement("option");
-    sizeOption.setAttribute("value", "choose");
-    sizeOption.textContent = sizes[z];
-    clone.querySelector("select").appendChild(sizeOption);
+  if (sizes.length === 1) {
+    main.querySelector("#size-buttons").remove();
+    main.querySelector("#add").classList.remove("inactive");
+  } else {
+    const chooseOption = document.createElement("option");
+    chooseOption.textContent = sizes[0];
+    chooseOption.setAttribute("value", "choose");
+    main.querySelector("select").appendChild(chooseOption);
+
+    for (let z = 1; z < sizes.length; z++) {
+      const sizeOption = document.createElement("option");
+      sizeOption.setAttribute("value", `size${z}`);
+      sizeOption.textContent = sizes[z];
+      main.querySelector("select").appendChild(sizeOption);
+    }
+
+    addCart();
   }
-
-  console.log(p.title);
-
-  document.querySelector("main").appendChild(clone);
 }
 
-databaseGet();
+function addCart() {
+  const clearBtn = document.querySelector("#product-page-det div button");
+  const add = document.querySelector("#add");
+  const select = document.querySelector("#size-select");
 
-// buttons stuff
-const clearBtn = document.querySelector("#product-page-det div button");
-const add = document.querySelector("#add");
-const select = document.querySelector("#size-select");
-
-select.addEventListener("change", () => {
-  if (select.value === "choose") {
-    add.classList.add("inactive");
-    clearBtn.classList.add("clear-invisible");
-  } else {
-    add.classList.remove("inactive");
-    clearBtn.classList.remove("clear-invisible");
-
-    clearBtn.addEventListener("click", () => {
-      select.value = "choose";
+  select.addEventListener("change", () => {
+    if (select.value === "choose") {
       add.classList.add("inactive");
       clearBtn.classList.add("clear-invisible");
-    });
-  }
-});
+    } else {
+      add.classList.remove("inactive");
+      clearBtn.classList.remove("clear-invisible");
+
+      clearBtn.addEventListener("click", () => {
+        select.value = "choose";
+        add.classList.add("inactive");
+        clearBtn.classList.add("clear-invisible");
+      });
+    }
+  });
+}
+
+dropdownAnim();
+databaseGet();

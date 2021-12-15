@@ -140,7 +140,22 @@ function logoChangeSize() {
 
 function databaseGet() {
   const urlParams = new URLSearchParams(window.location.search);
-  const url = "https://gnmmd2ndsemester-6f2a.restdb.io/rest/akva";
+  const sort = urlParams.get("q");
+  const url = `https://gnmmd2ndsemester-6f2a.restdb.io/rest/akva?q=${sort}`;
+  let url1;
+
+  if (
+    sort === '{"$and":[{"type":"ring"},{"material":"gold"}]}' ||
+    sort === '{"type":"necklace"}'
+  ) {
+    url1 = `https://gnmmd2ndsemester-6f2a.restdb.io/rest/akva-descriptions?q=${sort}&max=1`;
+  } else if (sort === '{"material":"gold"}') {
+    url1 =
+      'https://gnmmd2ndsemester-6f2a.restdb.io/rest/akva-descriptions?q={"$and":[{"type":""},{"material":"gold"}]}';
+  } else if (sort === '{"material":"diamond"}') {
+    url1 = `https://gnmmd2ndsemester-6f2a.restdb.io/rest/akva-descriptions?q=${sort}&max=3`;
+  } else
+    url1 = `https://gnmmd2ndsemester-6f2a.restdb.io/rest/akva-descriptions?q=${sort}`;
 
   const options = {
     headers: {
@@ -148,9 +163,20 @@ function databaseGet() {
     },
   };
 
+  fetch(url1, options)
+    .then((response) => response.json())
+    .then(dynamicInfo);
+
   fetch(url, options)
     .then((response) => response.json())
     .then(dynamicShow);
+}
+
+function dynamicInfo(d) {
+  console.log(d);
+  const productTypeInfo = d[d.length - 1];
+  document.querySelector("h1").textContent = productTypeInfo.titleInfo;
+  document.querySelector("#list-info p").innerHTML = productTypeInfo.descInfo;
 }
 
 function dynamicShow(p) {
@@ -161,7 +187,9 @@ function dynamicShow(p) {
     clone
       .querySelector("a")
       .setAttribute("href", `product-page.html?title=${e.title}`);
-    console.log(`product-page.html?title=${e.title}`);
+    clone
+      .querySelector("h3 a")
+      .setAttribute("href", `product-page.html?title=${e.title}`);
     clone.querySelector("img").src = e.coverImg;
     clone.querySelector("h3 a").textContent = e.title;
     clone.querySelector(".product-price").textContent = `${e.price} €`;
