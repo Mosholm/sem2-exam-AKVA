@@ -151,22 +151,67 @@ function logoChangeSize() {
 dropdownAnim();
 logoChangeSize();
 
-const collections = document.querySelectorAll(".cover-coll");
-const link1 = document.querySelector("#col-link1");
-const link2 = document.querySelector("#col-link2");
+// APEX radial chart
 
-collections[0].addEventListener("mouseenter", () => {
-  link1.style.setProperty("--default-line-width", "0");
-});
+// chart 1
 
-collections[0].addEventListener("mouseleave", () => {
-  link1.style.setProperty("--default-line-width", "100%");
-});
+var options = {
+  series: [70],
+  chart: {
+  height: 350,
+  type: 'radialBar',
+},
+plotOptions: {
+  radialBar: {
+    hollow: {
+      size: '70%',
+    }
+  },
+},
+labels: ['Cricket'],
+};
 
-collections[1].addEventListener("mouseenter", () => {
-  link2.style.setProperty("--default-line-width", "0");
-});
+var chart = new ApexCharts(document.querySelector("#chart1"), options);
+chart.render();
 
-collections[1].addEventListener("mouseleave", () => {
-  link2.style.setProperty("--default-line-width", "100%");
-});
+// chart 2
+
+var options = {
+  series: [70],
+  chart: {
+  height: 350,
+  type: 'radialBar',
+},
+plotOptions: {
+  radialBar: {
+    hollow: {
+      size: '70%',
+    }
+  },
+},
+labels: ['Cricket'],
+};
+
+var chart = new ApexCharts(document.querySelector("#chart2"), options);
+chart.render();
+
+// chart 3
+
+var options = {
+  series: [70],
+  chart: {
+  height: 350,
+  type: 'radialBar',
+},
+plotOptions: {
+  radialBar: {
+    hollow: {
+      size: '70%',
+    }
+  },
+},
+labels: ['Cricket'],
+};
+
+var chart = new ApexCharts(document.querySelector("#chart3"), options);
+chart.render();
