@@ -155,10 +155,10 @@ logoChangeSize();
 
 // chart 1
 
-var options = {
+var optionsChart1 = {
   series: [70],
   chart: {
-  height: 350,
+  height: 300,
   type: 'radialBar',
 },
 plotOptions: {
@@ -171,15 +171,15 @@ plotOptions: {
 labels: ['Cricket'],
 };
 
-var chart = new ApexCharts(document.querySelector("#chart1"), options);
+var chart = new ApexCharts(document.querySelector("#chart1"), optionsChart1);
 chart.render();
 
 // chart 2
 
-var options = {
+var optionsChart2 = {
   series: [70],
   chart: {
-  height: 350,
+  height: 300,
   type: 'radialBar',
 },
 plotOptions: {
@@ -192,15 +192,15 @@ plotOptions: {
 labels: ['Cricket'],
 };
 
-var chart = new ApexCharts(document.querySelector("#chart2"), options);
+var chart = new ApexCharts(document.querySelector("#chart2"), optionsChart2);
 chart.render();
 
 // chart 3
 
-var options = {
+var optionsChart3 = {
   series: [70],
   chart: {
-  height: 350,
+  height: 300,
   type: 'radialBar',
 },
 plotOptions: {
@@ -211,7 +211,9 @@ plotOptions: {
   },
 },
 labels: ['Cricket'],
+colors: ['#E91E63'],
 };
 
-var chart = new ApexCharts(document.querySelector("#chart3"), options);
+var chart = new ApexCharts(document.querySelector("#chart3"), optionsChart3);
 chart.render();
+
