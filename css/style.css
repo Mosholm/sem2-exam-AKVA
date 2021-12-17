@@ -751,11 +751,19 @@ footer small {
   height: fit-content;
 }
 
+#product-page-det p {
+  line-height: 21.5px;
+}
+
 #product-page-det p:first-of-type {
   margin-top: 1rem;
 }
 
 #product-page-det p:nth-of-type(2) {
+  margin-top: 0.9rem;
+}
+
+#product-page-det p:nth-of-type(3) {
   margin-top: 0.9rem;
 }
 
@@ -992,7 +1000,7 @@ footer small {
     grid-template-columns: 1fr;
   }
 
-  .why-care img{
+  .why-care img {
     padding-top: 40px;
   }
 

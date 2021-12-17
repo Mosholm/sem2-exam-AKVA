@@ -141,7 +141,7 @@ function logoChangeSize() {
 function databaseGet() {
   const urlParams = new URLSearchParams(window.location.search);
   const sort = urlParams.get("q");
-  const url = `https://gnmmd2ndsemester-6f2a.restdb.io/rest/akva?q=${sort}`;
+  const url = `https://gnmmd2ndsemester-6f2a.restdb.io/rest/akva?q=${sort}&sort=title`;
   let url1;
 
   if (
