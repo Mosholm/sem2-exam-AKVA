@@ -205,7 +205,7 @@ var optionsChart2 = {
     type: "radialBar"
   },
 
-  series: [5.8],
+  series: [5.9],
 
   plotOptions: {
     radialBar: {
