@@ -95,7 +95,7 @@ header a {
   bottom: 0px;
   position: relative;
   background-color: currentColor;
-  transition: width 0.5s cubic-bezier(0.73, 0, 0.38, 1);
+  transition: width 0.3s cubic-bezier(0.73, 0, 0.38, 1);
 }
 
 .dropdown-menu .underline-text::after {
@@ -482,7 +482,7 @@ h2 {
   bottom: 0px;
   position: relative;
   background-color: currentColor;
-  transition: width 0.5s cubic-bezier(0.73, 0, 0.38, 1);
+  transition: width 0.4s cubic-bezier(0.73, 0, 0.38, 1);
 }
 
 .link-line:hover::after {
