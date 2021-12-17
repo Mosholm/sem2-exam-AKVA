@@ -74,9 +74,11 @@ function dynamicShow(p) {
 
   main.querySelector("h1").textContent = p[0].title;
   main.querySelector("p:first-of-type").textContent = p[0].description1;
-  // main.querySelector("p:nth-of-type(2)").textContent = p[0].description2;
   main.querySelector("#product-price").textContent = `${p[0].price} €`;
   main.querySelector("img:first-of-type").src = p[0].coverImg;
+  main.querySelector("img:nth-of-type(2)").src = p[0].squareImg1;
+  main.querySelector("img:nth-of-type(3)").src = p[0].squareImg2;
+  main.querySelector("img:nth-of-type(4)").src = p[0].longImg;
 
   let sizes = p[0].sizes.split(",");
 

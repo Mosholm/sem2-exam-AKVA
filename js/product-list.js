@@ -173,10 +173,13 @@ function databaseGet() {
 }
 
 function dynamicInfo(d) {
-  console.log(d);
   const productTypeInfo = d[d.length - 1];
+  console.log(productTypeInfo);
   document.querySelector("h1").textContent = productTypeInfo.titleInfo;
   document.querySelector("#list-info p").innerHTML = productTypeInfo.descInfo;
+  document
+    .querySelector("#element-observer")
+    .setAttribute("src", `${productTypeInfo.coverImage}`);
 }
 
 function dynamicShow(p) {
@@ -196,6 +199,25 @@ function dynamicShow(p) {
 
     document.querySelector("#product-grid").appendChild(clone);
   });
+  imgOnHover();
+}
+
+function imgOnHover() {
+  const allImg = document.querySelectorAll(".image-hover");
+  const allDiv = document.querySelectorAll(".product-info");
+  console.log(allDiv);
+
+  for (let img = 0; img < allImg.length; img++) {
+    const element = allImg[img];
+    element.addEventListener("mouseenter", () => {
+      const productLink = allDiv[img].querySelector(".link-line");
+      productLink.style.setProperty("--default-line-width", "0");
+    });
+    element.addEventListener("mouseleave", () => {
+      const productLink = allDiv[img].querySelector(".link-line");
+      productLink.style.setProperty("--default-line-width", "100%");
+    });
+  }
 }
 
 dropdownAnim();

@@ -138,25 +138,24 @@ function logoChangeSize() {
   observer.observe(heroImg);
 }
 
+function imgOnHover() {
+  const allImg = document.querySelectorAll(".image-hover");
+  const allDiv = document.querySelectorAll(".gifts-products div, .cover-coll");
+  console.log(allDiv);
+
+  for (let img = 0; img < allImg.length; img++) {
+    const element = allImg[img];
+    element.addEventListener("mouseenter", () => {
+      const productLink = allDiv[img].querySelector(".link-line");
+      productLink.style.setProperty("--default-line-width", "0");
+    });
+    element.addEventListener("mouseleave", () => {
+      const productLink = allDiv[img].querySelector(".link-line");
+      productLink.style.setProperty("--default-line-width", "100%");
+    });
+  }
+}
+
 dropdownAnim();
 logoChangeSize();
-
-const collections = document.querySelectorAll(".cover-coll");
-const link1 = document.querySelector("#col-link1");
-const link2 = document.querySelector("#col-link2");
-
-collections[0].addEventListener("mouseenter", () => {
-  link1.style.setProperty("--default-line-width", "0");
-});
-
-collections[0].addEventListener("mouseleave", () => {
-  link1.style.setProperty("--default-line-width", "100%");
-});
-
-collections[1].addEventListener("mouseenter", () => {
-  link2.style.setProperty("--default-line-width", "0");
-});
-
-collections[1].addEventListener("mouseleave", () => {
-  link2.style.setProperty("--default-line-width", "100%");
-});
+imgOnHover();
