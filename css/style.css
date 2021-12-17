@@ -823,34 +823,119 @@ footer small {
 .why-care {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-column-gap: 3vw;
   max-width: var(--general-width);
   height: fit-content;
   margin: auto;
+  margin-bottom: 80px;
   background-color: #303030;
   color: white;
+  padding: 2rem 1.5rem 2rem 1.5rem;
 }
 
 .why-care img {
   display: block;
   width: 100%;
-  height: 70%;
+  height: 320px;
   object-fit: cover;
-  padding: 3vw;
+  align-self: flex-end;
 }
 
-.why-care h2 {
+.why-care h2,
+.white-background2 h2,
+.side-explenation h2 {
   text-align: left;
+  padding-bottom: 25px;
 }
 
 .why-care article {
+  display: flex;
+  flex-direction: column;
   text-align: left;
-  padding: 3vw;
+}
+
+.why-care p,
+.white-background2 p,
+.side-explenation p {
+  font-family: nunito-sans, sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.white-background2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 3vw;
+  grid-row-gap: 5vw;
+  background-color: white;
+  max-width: var(--general-width);
+  margin: 0rem auto;
+  margin-bottom: 0rem;
+  padding: 3rem 1.5rem 3rem 1.5rem;
+}
+
+.white-background2 img,
+.white-background2 svg {
+  width: 100%;
   height: fit-content;
 }
 
-.why-care p {
-  font: var(--p-font);
-  line-height: 30px;
+.certified-labels {
+  height: fit-content;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  padding: 30px 0px;
+}
+
+.certified-labels svg {
+  width: 130px;
+  height: fit-content;
+}
+
+.side-illustration {
+  width: 230px;
+  margin: auto;
+  height: fit-content;
+  justify-content: flex-end;
+}
+
+.side-explenation {
+  /* display: flex; */
+  grid-area: 2/1/2/3;
+  background-color: #303030;
+  height: fit-content;
+  color: white;
+  max-width: var(--general-width);
+  margin: 0rem auto;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+}
+
+.charts-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#chart1,
+#chart2,
+#chart3 {
+  width: 300px;
+  height: fit-content;
+  color: #303030;
+}
+
+.side-image img {
+  display: block;
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  align-self: flex-end;
+  padding-bottom: 50px;
+}
+
+.apexcharts-datalabel-value {
+  color: white;
 }
 
 /********** MEDIA QUERIES ***********/
@@ -894,6 +979,25 @@ footer small {
   .left-side-menu {
     display: flex;
     grid-column: 2/3;
+  }
+
+  .white-background2 {
+    grid-template-columns: 1fr;
+    grid-row-gap: 10vw;
+    margin-bottom: 0rem;
+    padding: 3rem 1.5rem 3rem 1.5rem;
+  }
+
+  .why-care {
+    grid-template-columns: 1fr;
+  }
+
+  .why-care img{
+    padding-top: 40px;
+  }
+
+  .charts-container {
+    display: none;
   }
 }
 
@@ -1044,5 +1148,9 @@ footer small {
 
   #main-diff p {
     margin: 0 0.5rem;
+  }
+
+  .certified-labels svg {
+    width: 110px;
   }
 }

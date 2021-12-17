@@ -151,22 +151,135 @@ function logoChangeSize() {
 dropdownAnim();
 logoChangeSize();
 
-const collections = document.querySelectorAll(".cover-coll");
-const link1 = document.querySelector("#col-link1");
-const link2 = document.querySelector("#col-link2");
+// APEX radial chart
 
-collections[0].addEventListener("mouseenter", () => {
-  link1.style.setProperty("--default-line-width", "0");
-});
+// chart 1
 
-collections[0].addEventListener("mouseleave", () => {
-  link1.style.setProperty("--default-line-width", "100%");
-});
+var optionsChart1 = {
+  chart: {
+    height: 280,
+    type: "radialBar"
+  },
 
-collections[1].addEventListener("mouseenter", () => {
-  link2.style.setProperty("--default-line-width", "0");
-});
+  series: [93.8],
 
-collections[1].addEventListener("mouseleave", () => {
-  link2.style.setProperty("--default-line-width", "100%");
-});
+  plotOptions: {
+    radialBar: {
+      hollow: {
+        margin: 15,
+        size: "70%"
+      },
+
+      dataLabels: {
+        showOn: "always",
+        name: {
+          offsetY: -10,
+          show: true,
+          color: "#fff",
+          fontSize: "13px"
+        },
+        value: {
+          color: "#fff",
+          fontSize: "30px",
+          show: true
+        }
+      }
+    }
+  },
+
+  stroke: {
+    lineCap: "round",
+  },
+  labels: ["Mining"],
+  colors: ["#FF0000"],
+};
+
+var chart = new ApexCharts(document.querySelector("#chart1"), optionsChart1);
+chart.render();
+
+// chart 2
+
+var optionsChart2 = {
+  chart: {
+    height: 280,
+    type: "radialBar"
+  },
+
+  series: [5.8],
+
+  plotOptions: {
+    radialBar: {
+      hollow: {
+        margin: 15,
+        size: "70%"
+      },
+
+      dataLabels: {
+        showOn: "always",
+        name: {
+          offsetY: -10,
+          show: true,
+          color: "#fff",
+          fontSize: "13px"
+        },
+        value: {
+          color: "#fff",
+          fontSize: "30px",
+          show: true
+        }
+      }
+    }
+  },
+
+  stroke: {
+    lineCap: "round",
+  },
+  labels: ["Electronic Scrap Recycling"],
+  colors: ["#FFFF00"],
+};
+
+var chart = new ApexCharts(document.querySelector("#chart2"), optionsChart2);
+chart.render();
+
+// chart 3
+
+var optionsChart3 = {
+  chart: {
+    height: 280,
+    type: "radialBar"
+  },
+
+  series: [0.3],
+
+  plotOptions: {
+    radialBar: {
+      hollow: {
+        margin: 15,
+        size: "70%"
+      },
+
+      dataLabels: {
+        showOn: "always",
+        name: {
+          offsetY: -10,
+          show: true,
+          color: "#fff",
+          fontSize: "13px"
+        },
+        value: {
+          color: "#fff",
+          fontSize: "30px",
+          show: true
+        }
+      }
+    }
+  },
+
+  stroke: {
+    lineCap: "round",
+  },
+  labels: ["High Value Recycling"],
+};
+
+var chart = new ApexCharts(document.querySelector("#chart3"), optionsChart3);
+chart.render();
