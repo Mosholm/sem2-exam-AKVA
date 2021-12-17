@@ -62,7 +62,7 @@ function logoChangeSize() {
 
   function reportWindowSize() {
     windowWidth = htmlElem.clientWidth;
-    // console.log(windowWidth);
+
     if (windowWidth < widthThreshold) {
       document
         .querySelector(".header-logo img")
@@ -92,7 +92,6 @@ function logoChangeSize() {
   });
 
   function expandLogo() {
-    // console.log("mouseenter");
     if (windowWidth >= widthThreshold) {
       document
         .querySelector(".header-logo img")
@@ -101,20 +100,14 @@ function logoChangeSize() {
   }
 
   function backInPosition() {
-    // console.log("mouseleave");
-    if (windowWidth >= widthThreshold) {
-      if (heroInPosition == true) {
-        document
-          .querySelector(".header-logo img")
-          .classList.add("logo-current");
-      }
+    if (windowWidth >= widthThreshold && heroInPosition == true) {
+      document.querySelector(".header-logo img").classList.add("logo-current");
     }
   }
 
   const heroImg = document.querySelector("#element-observer");
 
   function callbackFunction(entry) {
-    // console.log(entry[0].isIntersecting);
     if (windowWidth >= widthThreshold) {
       if (entry[0].isIntersecting == true) {
         document
@@ -174,26 +167,31 @@ function databaseGet() {
 
 function dynamicInfo(d) {
   const productTypeInfo = d[d.length - 1];
-  console.log(productTypeInfo);
+
   document.querySelector("h1").textContent = productTypeInfo.titleInfo;
   document.querySelector("#list-info p").innerHTML = productTypeInfo.descInfo;
   document
     .querySelector("#element-observer")
     .setAttribute("src", `${productTypeInfo.coverImage}`);
+
+  document
+    .querySelector("#element-observer")
+    .setAttribute("at", `${productTypeInfo.titleInfo}`);
 }
 
 function dynamicShow(p) {
   p.forEach((e) => {
     const temp = document.querySelector("template").content;
     const clone = temp.cloneNode(true);
+    const links = clone.querySelectorAll("a");
 
-    clone
-      .querySelector("a")
-      .setAttribute("href", `product-page.html?title=${e.title}`);
-    clone
-      .querySelector("h3 a")
-      .setAttribute("href", `product-page.html?title=${e.title}`);
+    for (let l = 0; l < links.length; l++) {
+      links[l].setAttribute("href", `product-page.html?title=${e.title}`);
+      links[l].setAttribute("aria-label", `${e.title}`);
+    }
+
     clone.querySelector("img").src = e.coverImg;
+    clone.querySelector("img").alt = e.title;
     clone.querySelector("h3 a").textContent = e.title;
     clone.querySelector(".product-price").textContent = `${e.price} €`;
 
@@ -205,7 +203,6 @@ function dynamicShow(p) {
 function imgOnHover() {
   const allImg = document.querySelectorAll(".image-hover");
   const allDiv = document.querySelectorAll(".product-info");
-  console.log(allDiv);
 
   for (let img = 0; img < allImg.length; img++) {
     const element = allImg[img];

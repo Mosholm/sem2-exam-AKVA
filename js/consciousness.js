@@ -72,7 +72,6 @@ function logoChangeSize() {
 
   function reportWindowSize() {
     windowWidth = htmlElem.clientWidth;
-    // console.log(windowWidth);
     if (windowWidth < widthThreshold) {
       document
         .querySelector(".header-logo img")
@@ -102,7 +101,6 @@ function logoChangeSize() {
   });
 
   function expandLogo() {
-    // console.log("mouseenter");
     if (windowWidth >= widthThreshold) {
       document
         .querySelector(".header-logo img")
@@ -111,20 +109,14 @@ function logoChangeSize() {
   }
 
   function backInPosition() {
-    // console.log("mouseleave");
-    if (windowWidth >= widthThreshold) {
-      if (heroInPosition == true) {
-        document
-          .querySelector(".header-logo img")
-          .classList.add("logo-current");
-      }
+    if (windowWidth >= widthThreshold && heroInPosition == true) {
+      document.querySelector(".header-logo img").classList.add("logo-current");
     }
   }
 
   const heroImg = document.querySelector("#element-observer");
 
   function callbackFunction(entry) {
-    // console.log(entry[0].isIntersecting);
     if (windowWidth >= widthThreshold) {
       if (entry[0].isIntersecting == true) {
         document
@@ -158,7 +150,7 @@ logoChangeSize();
 var optionsChart1 = {
   chart: {
     height: 280,
-    type: "radialBar"
+    type: "radialBar",
   },
 
   series: [93.8],
@@ -167,7 +159,7 @@ var optionsChart1 = {
     radialBar: {
       hollow: {
         margin: 15,
-        size: "70%"
+        size: "70%",
       },
 
       dataLabels: {
@@ -176,15 +168,15 @@ var optionsChart1 = {
           offsetY: -10,
           show: true,
           color: "#fff",
-          fontSize: "13px"
+          fontSize: "13px",
         },
         value: {
           color: "#fff",
           fontSize: "30px",
-          show: true
-        }
-      }
-    }
+          show: true,
+        },
+      },
+    },
   },
 
   stroke: {
@@ -202,7 +194,7 @@ chart.render();
 var optionsChart2 = {
   chart: {
     height: 280,
-    type: "radialBar"
+    type: "radialBar",
   },
 
   series: [5.9],
@@ -211,7 +203,7 @@ var optionsChart2 = {
     radialBar: {
       hollow: {
         margin: 15,
-        size: "70%"
+        size: "70%",
       },
 
       dataLabels: {
@@ -220,15 +212,15 @@ var optionsChart2 = {
           offsetY: -10,
           show: true,
           color: "#fff",
-          fontSize: "13px"
+          fontSize: "13px",
         },
         value: {
           color: "#fff",
           fontSize: "30px",
-          show: true
-        }
-      }
-    }
+          show: true,
+        },
+      },
+    },
   },
 
   stroke: {
@@ -246,7 +238,7 @@ chart.render();
 var optionsChart3 = {
   chart: {
     height: 280,
-    type: "radialBar"
+    type: "radialBar",
   },
 
   series: [0.3],
@@ -255,7 +247,7 @@ var optionsChart3 = {
     radialBar: {
       hollow: {
         margin: 15,
-        size: "70%"
+        size: "70%",
       },
 
       dataLabels: {
@@ -264,15 +256,15 @@ var optionsChart3 = {
           offsetY: -10,
           show: true,
           color: "#fff",
-          fontSize: "13px"
+          fontSize: "13px",
         },
         value: {
           color: "#fff",
           fontSize: "30px",
-          show: true
-        }
-      }
-    }
+          show: true,
+        },
+      },
+    },
   },
 
   stroke: {

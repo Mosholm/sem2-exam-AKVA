@@ -672,6 +672,7 @@ footer small {
 #list-info p {
   width: 60%;
   margin-top: 1rem;
+  line-height: 23px;
 }
 
 #list-info a {

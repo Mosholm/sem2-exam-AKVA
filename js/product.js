@@ -82,6 +82,11 @@ function dynamicShow(p) {
   main.querySelector("img:nth-of-type(3)").src = p[0].squareImg2;
   main.querySelector("img:nth-of-type(4)").src = p[0].longImg;
 
+  main.querySelector("img:first-of-type").alt = p[0].title;
+  main.querySelector("img:nth-of-type(2)").alt = p[0].title;
+  main.querySelector("img:nth-of-type(3)").alt = p[0].title;
+  main.querySelector("img:nth-of-type(4)").alt = p[0].title;
+
   let sizes = p[0].sizes.split(",");
 
   if (sizes.length === 1) {
