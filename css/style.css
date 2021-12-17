@@ -937,6 +937,10 @@ footer small {
   padding-bottom: 50px;
 }
 
+.apexcharts-datalabel-value {
+  color: white;
+}
+
 /********** MEDIA QUERIES ***********/
 
 @media screen and (max-width: 1100px) {

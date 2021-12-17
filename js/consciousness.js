@@ -156,19 +156,42 @@ logoChangeSize();
 // chart 1
 
 var optionsChart1 = {
-  series: [70],
   chart: {
-  height: 300,
-  type: 'radialBar',
-},
-plotOptions: {
-  radialBar: {
-    hollow: {
-      size: '70%',
+    height: 280,
+    type: "radialBar"
+  },
+
+  series: [93.8],
+
+  plotOptions: {
+    radialBar: {
+      hollow: {
+        margin: 15,
+        size: "70%"
+      },
+
+      dataLabels: {
+        showOn: "always",
+        name: {
+          offsetY: -10,
+          show: true,
+          color: "#fff",
+          fontSize: "13px"
+        },
+        value: {
+          color: "#fff",
+          fontSize: "30px",
+          show: true
+        }
+      }
     }
   },
-},
-labels: ['Cricket'],
+
+  stroke: {
+    lineCap: "round",
+  },
+  labels: ["Mining"],
+  colors: ["#FF0000"],
 };
 
 var chart = new ApexCharts(document.querySelector("#chart1"), optionsChart1);
@@ -177,19 +200,42 @@ chart.render();
 // chart 2
 
 var optionsChart2 = {
-  series: [70],
   chart: {
-  height: 300,
-  type: 'radialBar',
-},
-plotOptions: {
-  radialBar: {
-    hollow: {
-      size: '70%',
+    height: 280,
+    type: "radialBar"
+  },
+
+  series: [5.8],
+
+  plotOptions: {
+    radialBar: {
+      hollow: {
+        margin: 15,
+        size: "70%"
+      },
+
+      dataLabels: {
+        showOn: "always",
+        name: {
+          offsetY: -10,
+          show: true,
+          color: "#fff",
+          fontSize: "13px"
+        },
+        value: {
+          color: "#fff",
+          fontSize: "30px",
+          show: true
+        }
+      }
     }
   },
-},
-labels: ['Cricket'],
+
+  stroke: {
+    lineCap: "round",
+  },
+  labels: ["Electronic Scrap Recycling"],
+  colors: ["#FFFF00"],
 };
 
 var chart = new ApexCharts(document.querySelector("#chart2"), optionsChart2);
@@ -198,22 +244,42 @@ chart.render();
 // chart 3
 
 var optionsChart3 = {
-  series: [70],
   chart: {
-  height: 300,
-  type: 'radialBar',
-},
-plotOptions: {
-  radialBar: {
-    hollow: {
-      size: '70%',
+    height: 280,
+    type: "radialBar"
+  },
+
+  series: [0.3],
+
+  plotOptions: {
+    radialBar: {
+      hollow: {
+        margin: 15,
+        size: "70%"
+      },
+
+      dataLabels: {
+        showOn: "always",
+        name: {
+          offsetY: -10,
+          show: true,
+          color: "#fff",
+          fontSize: "13px"
+        },
+        value: {
+          color: "#fff",
+          fontSize: "30px",
+          show: true
+        }
+      }
     }
   },
-},
-labels: ['Cricket'],
-colors: ['#E91E63'],
+
+  stroke: {
+    lineCap: "round",
+  },
+  labels: ["High Value Recycling"],
 };
 
 var chart = new ApexCharts(document.querySelector("#chart3"), optionsChart3);
 chart.render();
-
