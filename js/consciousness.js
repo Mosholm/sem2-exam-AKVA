@@ -144,7 +144,6 @@ dropdownAnim();
 logoChangeSize();
 
 // APEX radial chart
-
 // chart 1
 
 var optionsChart1 = {

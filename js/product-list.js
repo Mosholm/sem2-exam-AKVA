@@ -137,15 +137,14 @@ function databaseGet() {
   const url = `https://gnmmd2ndsemester-6f2a.restdb.io/rest/akva?q=${sort}&sort=title`;
   let url1;
 
-  if (
-    sort === '{"$and":[{"type":"ring"},{"material":"gold"}]}' ||
-    sort === '{"type":"necklace"}'
-  ) {
+  if (sort === '{"type":"necklace"}') {
+    url1 = `https://gnmmd2ndsemester-6f2a.restdb.io/rest/akva-descriptions?q=${sort}&max=2`;
+  } else if (sort === '{"$and":[{"type":"ring"},{"material":"gold"}]}') {
     url1 = `https://gnmmd2ndsemester-6f2a.restdb.io/rest/akva-descriptions?q=${sort}&max=1`;
   } else if (sort === '{"material":"gold"}') {
     url1 =
       'https://gnmmd2ndsemester-6f2a.restdb.io/rest/akva-descriptions?q={"$and":[{"type":""},{"material":"gold"}]}';
-  } else if (sort === '{"material":"diamond"}') {
+  } else if (sort === '{"material": "diamond"}') {
     url1 = `https://gnmmd2ndsemester-6f2a.restdb.io/rest/akva-descriptions?q=${sort}&max=3`;
   } else
     url1 = `https://gnmmd2ndsemester-6f2a.restdb.io/rest/akva-descriptions?q=${sort}`;
