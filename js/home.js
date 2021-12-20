@@ -62,7 +62,6 @@ function logoChangeSize() {
 
   function reportWindowSize() {
     windowWidth = htmlElem.clientWidth;
-    // console.log(windowWidth);
     if (windowWidth < widthThreshold) {
       document
         .querySelector(".header-logo img")
@@ -92,7 +91,6 @@ function logoChangeSize() {
   });
 
   function expandLogo() {
-    // console.log("mouseenter");
     if (windowWidth >= widthThreshold) {
       document
         .querySelector(".header-logo img")
@@ -101,20 +99,14 @@ function logoChangeSize() {
   }
 
   function backInPosition() {
-    // console.log("mouseleave");
-    if (windowWidth >= widthThreshold) {
-      if (heroInPosition == true) {
-        document
-          .querySelector(".header-logo img")
-          .classList.add("logo-current");
-      }
+    if (windowWidth >= widthThreshold && heroInPosition == true) {
+      document.querySelector(".header-logo img").classList.add("logo-current");
     }
   }
 
   const heroImg = document.querySelector("#element-observer");
 
   function callbackFunction(entry) {
-    // console.log(entry[0].isIntersecting);
     if (windowWidth >= widthThreshold) {
       if (entry[0].isIntersecting == true) {
         document
@@ -141,7 +133,6 @@ function logoChangeSize() {
 function imgOnHover() {
   const allImg = document.querySelectorAll(".image-hover");
   const allDiv = document.querySelectorAll(".gifts-products div, .cover-coll");
-  console.log(allDiv);
 
   for (let img = 0; img < allImg.length; img++) {
     const element = allImg[img];

@@ -14,7 +14,7 @@
       <button class="left-side-menu">
         <svg
           class="bag-icon"
-          id="Layer_1"
+          class="Layer_1"
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
           width="408.33"
@@ -30,7 +30,7 @@
       <nav class="header-list">
         <ul>
           <li class="underline-text"><a href="../index.html">Home</a></li>
-          <li class="activate-dropdown underline-text active-page">
+          <li class="activate-dropdown underline-text">
             <a
               href='product-list.html?q={"$or": [{"collection": "signature"}, {"collection": "consilium"}, {"collection": "allJewellery"}, {"collection": "wedding"}]}'
               >Jewellery</a
@@ -153,7 +153,7 @@
             <button>
               <svg
                 class="svg-button"
-                id="Layer_1"
+                class="Layer_1"
                 data-name="Layer 1"
                 xmlns="http://www.w3.org/2000/svg"
                 width="504"
@@ -177,7 +177,7 @@
             <button>
               <svg
                 class="svg-button"
-                id="Layer_1"
+                class="Layer_1"
                 data-name="Layer 1"
                 xmlns="http://www.w3.org/2000/svg"
                 width="420"
@@ -195,7 +195,7 @@
             <button>
               <svg
                 class="svg-button"
-                id="Layer_1"
+                class="Layer_1"
                 data-name="Layer 1"
                 xmlns="http://www.w3.org/2000/svg"
                 width="408.33"
@@ -362,9 +362,15 @@
                 <section>
                   <nav class="dropdown-category">
                     <ul>
-                      <li><a href="under-construction.html">Contact</a></li>
-                      <li><a href="under-construction.html">Our story</a></li>
-                      <li><a href="under-construction.html">Gift card</a></li>
+                      <li>
+                        <a href="under-construction.html">Contact</a>
+                      </li>
+                      <li>
+                        <a href="under-construction.html">Our story</a>
+                      </li>
+                      <li>
+                        <a href="under-construction.html">Gift card</a>
+                      </li>
                       <li><a href="under-construction.html">Blog</a></li>
                     </ul>
                   </nav>
@@ -383,83 +389,242 @@
     </header>
 
     <main>
-      <section id="hero-img">
-        <img id="element-observer" src="" alt="" />
-      </section>
+      <section id="available-pages">
+        <h1 id="constr-h1">Sorry, this page is under construction.</h1>
+        <h2>Check out one of the pages below.</h2>
+        <p>These are our main pages:</p>
+        <ul>
+          <li>
+            <a class="link-line" href="../index.html">Home</a>
+          </li>
+          <li>
+            <a
+              class="link-line"
+              href='product-list.html?q={"$or": [{"collection": "signature"}, {"collection": "consilium"}, {"collection": "allJewellery"}, {"collection": "wedding"}]}'
+              >Jewellery</a
+            >
+          </li>
+          <li>
+            <a class="link-line" href="product-page.html?title=Ora Ring Pavé"
+              >Product page
+            </a>
+          </li>
 
-      <section id="list-info">
-        <h1></h1>
-        <p></p>
-      </section>
+          <li>
+            <a class="link-line" href="consciousness.html">Consciousness</a>
+          </li>
+        </ul>
+        <p>
+          These are our product categoriesY you can find them in the header
+          under "Jewellery":
+        </p>
+        <ul>
+          <li>
+            <a
+              class="link-line"
+              class="link-line"
+              href='product-list.html?q={"type":"ring"}'
+              >Rings</a
+            >
+          </li>
+          <li>
+            <a class="link-line" href='product-list.html?q={"type":"earrings"}'
+              >Earrings</a
+            >
+          </li>
+          <li>
+            <a class="link-line" href='product-list.html?q={"type":"bracelet"}'
+              >Bracelets</a
+            >
+          </li>
+          <li>
+            <a class="link-line" href='product-list.html?q={"type":"necklace"}'
+              >Necklaces</a
+            >
+          </li>
+          <li>
+            <a
+              class="link-line"
+              href='product-list.html?q={"collection":"wedding"}'
+              >Wedding rings</a
+            >
+          </li>
+        </ul>
 
-      <template>
-        <div class="individual-product">
-          <a class="product-img image-hover" href="#" aria-label="a">
-            <img src="" alt="" />
-          </a>
-          <div class="product-info">
-            <h3><a href="#" class="link-line" aria-label="a"></a></h3>
-            <div class="product-price"></div>
+        <p>
+          Each category has its own "material" subcategories. You can access
+          them from each category page and they are:
+        </p>
+        <ul>
+          <li>
+            <a
+              class="link-line"
+              href='product-list.html?q={"$and": [{"type": "ring"}, {"material": "silver"}]}'
+              >Silver rings</a
+            >
+          </li>
+          <li>
+            <a
+              class="link-line"
+              href='product-list.html?q={"$and":[{"type":"ring"},{"material":"gold"}]}&max=1'
+              >Gold rings</a
+            >
+          </li>
+          <li>
+            <a
+              class="link-line"
+              href='product-list.html?q={"$and": [{"type": "ring"}, {"material": "diamond"}]}'
+              >Diamond rings</a
+            >
+          </li>
+          <li>
+            <a
+              class="link-line"
+              href='product-list.html?q={"collection": "wedding"}'
+              >Wedding rings</a
+            >
+          </li>
+          <li>
+            <a
+              class="link-line"
+              href='product-list.html?q={"$and": [{"type": "earrings"}, {"material": "silver"}]}'
+              >Silver earrings</a
+            >
+          </li>
+          <li>
+            <a
+              class="link-line"
+              href='product-list.html?q={"$and": [{"type": "earrings"}, {"material": "gold"}]}'
+              >Gold earrings</a
+            >
+          </li>
+          <li>
+            <a
+              class="link-line"
+              href='product-list.html?q={"$and": [{"type": "earrings"}, {"material": "diamond"}]}'
+              >Diamond earrings</a
+            >
+          </li>
+          <li>
+            <a
+              class="link-line"
+              href='product-list.html?q={"$and": [{"type": "bracelet"}, {"material": "silver"}]}'
+              >Silver Bracelets</a
+            >
+          </li>
+          <li>
+            <a
+              class="link-line"
+              href='product-list.html?q={"$and": [{"type": "bracelet"}, {"material": "gold"}]}'
+              >Gold bracelets</a
+            >
+          </li>
+          <li>
+            <a
+              class="link-line"
+              href='product-list.html?q={"$and": [{"type": "necklace"}, {"material": "gold"}]}'
+              >Gold necklaces</a
+            >
+          </li>
+          <li>
+            <a
+              class="link-line"
+              href='product-list.html?q={"$and": [{"type": "necklace"}, {"material": "diamond"}]}'
+              >Diamond necklaces</a
+            >
+          </li>
+        </ul>
+        <p>
+          In the header, under "Jewellery" you can also filter product by
+          material or collection:
+        </p>
+        <ul>
+          <li>
+            <a
+              class="link-line"
+              href='product-list.html?q={"material":"silver"}'
+              >Silver Jewellery</a
+            >
+          </li>
+          <li>
+            <a class="link-line" href='product-list.html?q={"material":"gold"}'
+              >Gold Jewellery</a
+            >
+          </li>
+          <li>
+            <a
+              class="link-line"
+              href='product-list.html?q={"material":"diamond"}'
+              >Diamond Jewellery</a
+            >
+          </li>
+          <li>
+            <a
+              class="link-line"
+              href='product-list.html?q={"collection":"signature"}'
+              >Signature Collection</a
+            >
+          </li>
+          <li>
+            <a
+              class="link-line"
+              href='product-list.html?q={"collection":"consilium"}'
+              >Consilium Collection</a
+            >
+          </li>
+        </ul>
+      </section>
+      <footer>
+        <section id="info">
+          <h4>AKVA jewellery</h4>
+          <div>
+            <ul>
+              <li>Bredgade 36B, 4. sal</li>
+              <li>1260 Kbh K</li>
+              <li>Denmark</li>
+              <li>Phone: +45 23 20 82 42</li>
+              <li>E-mail: info@akvajewellery.com</li>
+            </ul>
+
+            <ul>
+              <li>
+                <a
+                  class="link-line"
+                  href="https://www.instagram.com/akvajewellerycph/"
+                  >Instagram</a
+                >
+              </li>
+              <li>
+                <a class="link-line" href="under-construction.html"
+                  >Privacy policy</a
+                >
+              </li>
+              <li>
+                <a class="link-line" href="under-construction.html"
+                  >Return Policy</a
+                >
+              </li>
+              <li>
+                <a class="link-line" href="under-construction.html"
+                  >Terms and conditions</a
+                >
+              </li>
+              <li>
+                <a class="link-line" href="under-construction.html"
+                  >My Account
+                </a>
+              </li>
+              <li>
+                <a class="link-line" href="under-construction.html">Contact</a>
+              </li>
+            </ul>
           </div>
-        </div>
-      </template>
-
-      <section id="product-grid" class="gifts-products"></section>
+        </section>
+        <small
+          >© Akva Jewellery - All images © Pernille Ølgod Photography, Alona
+          Vibe & Helle Moos</small
+        >
+      </footer>
     </main>
-
-    <footer>
-      <section id="info">
-        <h4>AKVA jewellery</h4>
-        <div>
-          <ul>
-            <li>Bredgade 36B, 4. sal</li>
-            <li>1260 Kbh K</li>
-            <li>Denmark</li>
-            <li>Phone: +45 23 20 82 42</li>
-            <li>E-mail: info@akvajewellery.com</li>
-          </ul>
-
-          <ul>
-            <li>
-              <a
-                class="link-line"
-                href="https://www.instagram.com/akvajewellerycph/"
-                target="_blank"
-                >Instagram</a
-              >
-            </li>
-            <li>
-              <a class="link-line" href="under-construction.html"
-                >Privacy policy</a
-              >
-            </li>
-            <li>
-              <a class="link-line" href="under-construction.html"
-                >Return Policy</a
-              >
-            </li>
-            <li>
-              <a class="link-line" href="under-construction.html"
-                >Terms and conditions</a
-              >
-            </li>
-            <li>
-              <a class="link-line" href="under-construction.html"
-                >My Account
-              </a>
-            </li>
-            <li>
-              <a class="link-line" href="under-construction.html">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <small
-        >© Akva Jewellery - All images © Pernille Ølgod Photography, Alona Vibe
-        & Helle Moos</small
-      >
-    </footer>
-
-    <script src="../js/product-list.js"></script>
   </body>
 </html>
