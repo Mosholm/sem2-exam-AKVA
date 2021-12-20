@@ -69,6 +69,10 @@ a:active {
   color: inherit;
 }
 
+:focus-visible {
+  outline: none;
+}
+
 button:hover {
   cursor: pointer;
 }
