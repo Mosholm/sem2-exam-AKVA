@@ -99,10 +99,11 @@ function dynamicShow(p) {
   main.querySelector("img:nth-of-type(4)").alt = p[0].title;
 
   let sizes = p[0].sizes.split(",");
-
+//if the size lenght only is on aka. you dont have to chose size. then the inactivity is irelevant. and sice is not optional
   if (sizes.length === 1) {
     main.querySelector("#size-buttons").remove();
     main.querySelector("#add").classList.remove("inactive");
+//othervice the sice options are set
   } else {
     const chooseOption = document.createElement("option");
     chooseOption.textContent = sizes[0];

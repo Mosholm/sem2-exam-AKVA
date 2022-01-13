@@ -155,9 +155,15 @@ function databaseGet() {
     },
   };
 
+  //The category description
+
   fetch(url1, options)
+    // "when you have the data, pull out the json"
     .then((response) => response.json())
+    //"when you have the data call dynamicInfo function"
     .then(dynamicInfo);
+
+  //same goes for the jewellery description:
 
   fetch(url, options)
     .then((response) => response.json())
@@ -172,16 +178,20 @@ function dynamicInfo(d) {
   document
     .querySelector("#element-observer")
     .setAttribute("src", `${productTypeInfo.coverImage}`);
-
   document
     .querySelector("#element-observer")
     .setAttribute("at", `${productTypeInfo.titleInfo}`);
 }
 
 function dynamicShow(p) {
+  //for each 'p'roduct in the array we are gonna get one 'e'lement
   p.forEach((e) => {
+    //run through the content in the template
     const temp = document.querySelector("template").content;
+
+    //we are making a copy/clone
     const clone = temp.cloneNode(true);
+
     const links = clone.querySelectorAll("a");
 
     for (let l = 0; l < links.length; l++) {
@@ -189,13 +199,16 @@ function dynamicShow(p) {
       links[l].setAttribute("aria-label", `${e.title}`);
     }
 
+    //Now we are inside the clone.. we are searching for the img (the source content) That should be equal to element.coverImg(JSON)
     clone.querySelector("img").src = e.coverImg;
     clone.querySelector("img").alt = e.title;
     clone.querySelector("h3 a").textContent = e.title;
     clone.querySelector(".product-price").textContent = `${e.price} €`;
 
+    //then we appende it to the parent element.. the grid
     document.querySelector("#product-grid").appendChild(clone);
   });
+
   imgOnHover();
 }
 

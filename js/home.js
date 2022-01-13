@@ -136,6 +136,8 @@ function imgOnHover() {
 
   for (let img = 0; img < allImg.length; img++) {
     const element = allImg[img];
+
+    
     element.addEventListener("mouseenter", () => {
       const productLink = allDiv[img].querySelector(".link-line");
       productLink.style.setProperty("--default-line-width", "0");

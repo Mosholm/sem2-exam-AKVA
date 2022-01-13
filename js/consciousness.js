@@ -144,6 +144,12 @@ dropdownAnim();
 logoChangeSize();
 
 // APEX radial chart
+
+//    Change the stroke’s lineCap
+//    Change the inner hollow size
+//    Customize the fontsize and color of the dataLabels
+
+
 // chart 1
 
 var optionsChart1 = {
